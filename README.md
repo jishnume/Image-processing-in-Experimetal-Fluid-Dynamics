@@ -16,6 +16,6 @@ A hands-on course that takes you from installing MATLAB to measuring the sedimen
 | [03](docs/lesson_03/) | Reading Images and Videos |
 | [04](docs/lesson_04/) | Image Enhancement |
 | [05](docs/lesson_05/) | Image Segmentation |
-| [06](docs/lesson_06/) | Project-1, Sedimentation of a sphere |
-| [07](docs/lesson_07/) | Project-2, Sedimentation of a soft sphere |
+| [06](docs/lesson_06/) | Project - Sedimentation of a sphere |
+| [07](docs/lesson_07/) | Practice, - more sample images to try|
 
