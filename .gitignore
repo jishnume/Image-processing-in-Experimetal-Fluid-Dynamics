@@ -1,1 +1,11 @@
-# Nothing to add at this moment. Will come back to it later.
+# Ignoring folder containing data
+data/*
+
+# Ignoring files generated related to beamer presentation
+*.sty
+*.log
+*.nav
+*.out
+*.snm
+*.tex
+*.toc
