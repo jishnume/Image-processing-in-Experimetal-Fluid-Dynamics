@@ -8,6 +8,6 @@
 function image_viewer(img,plot_title)
     figure;
     imshow(img)
-    title(plot_title,color='b',fontsize=16)
+    title(plot_title,color='b',fontsize=16,fontweight='normal')
     pause(1);
 end
