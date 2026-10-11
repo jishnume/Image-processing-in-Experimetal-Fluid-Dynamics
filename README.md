@@ -4,14 +4,18 @@
 Here, I have described some of the common image processing techniques to analyse fluid dynamics experiments.
 
 
-### A brief plan for the lessons
-0. Getting started with MATLAB --> lesson 00
-1. Installing MATLAB --> lesson 01
-2. About Images --> lesson 02
-3. Inspecting everything about Images - with livescript --> lesson 03
-4. Intensity transformations - imadjust, histogram - with livescript --> lesson 04
-5. Spatial filtering - with livescript --> lesson 05
-6. Image segmentation - edge-detection, thresholding - with livescript --> lesson 06
-7. Representation and description - based on regionprops, etc.  - with livescript --> lesson 07
-8. Applying all these knowledge to find sedimentation velocity of a soft particle. - with functions and livescripts --> lesson 08
-9. Finishing remark
+### Brief plan for the topics
+
+A hands-on course that takes you from installing MATLAB to measuring the sedimentation velocity of a soft particle from images.
+
+| Lesson | Topic |
+|:------:|-------|
+| [00](docs/lesson_00/) | MATLAB vs Python - key difference |
+| [01](docs/lesson_01/) | Installing MATLAB toolboxes |
+| [02](docs/lesson_02/) | What is an image ? |
+| [03](docs/lesson_03/) | Reading Images and Videos |
+| [04](docs/lesson_04/) | Image Enhancement |
+| [05](docs/lesson_05/) | Image Segmentation |
+| [06](docs/lesson_06/) | Project-1, Sedimentation of a sphere |
+| [07](docs/lesson_07/) | Project-2, Sedimentation of a soft sphere |
+
