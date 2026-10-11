@@ -10,3 +10,9 @@ data/*
 *.snm
 *.tex
 *.toc
+
+# Ignoring some specific files
+analysis_sedimentation_jishnu.m
+params_sedimentation.mat
+raw_data.csv
+
