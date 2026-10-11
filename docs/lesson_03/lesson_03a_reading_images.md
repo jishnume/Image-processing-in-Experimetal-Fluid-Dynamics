@@ -1,10 +1,7 @@
 
-# Reading images and videos
+# Reading images
 
-The script describes simple ways to read images and videos into your workflow.
-
-
-I am using here the relative filepath (applicable to my system). Download the data folder and put the filepath suitable to your system.
+The script describes simple ways to read images using MATLAB.
 
 # Reading Images
 ```matlab
