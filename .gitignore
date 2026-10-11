@@ -2,6 +2,7 @@
 data/*
 
 # Ignoring files generated related to beamer presentation
+*.aux
 *.sty
 *.log
 *.nav
