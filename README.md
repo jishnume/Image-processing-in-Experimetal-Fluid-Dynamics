@@ -24,4 +24,4 @@ A short [presentation](ppt_training/ppt_DIP_training.pdf) given during the train
 
 
 ### Contact
-For any issue regarding the repo, create an issue. Otherwise, send me an [email](goswamijishnume@gmail.com).
+For any issue regarding the repo, create an issue. Otherwise, send me an email (personal email: goswamijishnume@gmail.com)
