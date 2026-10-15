@@ -23,10 +23,13 @@ now you will try to analyse a full (sedimentation) experiment.
 (for numerical values) and [] for empty arrays. The task now will be to
 decide on these parameters on your own to build on the analysis routine.
 
+  
+- All the places where you will need to add your own values are marked as "decision".
 
+  
 - Note that at first stage, you will store all the image-processing
 parameters into a struct calling here as "param". In the next stages, you
-will extract the choosen parameters (without manually copy and pasting it)
+will extract the choosen parameters (without manually copy and pasting it).
 
 
 
@@ -49,69 +52,92 @@ disp('Number of frame = '+string(video_sphere.NumFrames))
 param.video_sphere=video_sphere; 
 
 
+% first physical frame (frame @t=0sec)
+first_physical_frame=50;
+param.first_physical_frame=first_physical_frame;
+
+% final frame for analysis
+final_frame=1800;
+param.final_frame=final_frame;
+
+
+%%
+
 
 % /////////////////////////////////
-%         Decision-1          %%
+%         Decision-1             //
+% /////////////////////////////////
 
-%{
-Decision-1
-==========
-Here you will choose a frame from the video to set the processing
-parameters
+% Here you will choose a frame from the video to set the processing
+% parameters
 
-%}
 test_frame_num=NaN;
 
 % Reading the test frame
 img=read(video_sphere,test_frame_num);
-image_viewer(img,"Te  st Image with the sphere")
-    
-    
-% full crop-rect
-img_crop_choose=im2gray(read(video_sphere,test_frame_num));
-crop_rect_full=[];
+image_viewer(img,"Selected test frame")
 
-% Updating the crop rectangle
-crop_rect_physical=crop_rect_full;
-crop_rect_physical(3)=crop_rect_physical(3); 
+%%
 
-% ////////////////////////////////////
-%        Selecting Frame vector     //
-% ////////////////////////////////////
-first_physical_frame=50;
-param.first_physical_frame=first_physical_frame;
 
-final_frame=1800;
-param.final_frame=final_frame;
+% /////////////////////////////////
+%         Decision-2             //
+% /////////////////////////////////
+% here, the goal is to select a rectangle to crop the image
 
-% Cropping the image
-crop_rect=crop_rect_physical;
-img_crop=imcrop(img,crop_rect);
+% crop rectangle
+crop_rect=[];
 param.crop_rect=crop_rect;
-% image_viewer(img_crop,'Cropped Frame')
+
+% cropping the image
+img_crop=imcrop(img,crop_rect)
+image_viewer(img_crop,"Cropped Image")
+
+
+%%
 
 
 % Converting the image to grayscale
 img_gray=im2gray(img_crop);
-% image_viewer(img_gray,"Grayscale Image")
+image_viewer(img_gray,"Grayscale Image")
  
 
+%%
+
+% /////////////////////////////////
+%         Decision-3             //
+% /////////////////////////////////
 % Adjusting the contrast
 
 contrast_rect=[];
 img_adj=imadjust(img_gray,contrast_rect,[0/255,255/255]);
-% image_viewer(img_adj,'Contrast Enhanced Image')
+image_viewer(img_adj,'Contrast Enhanced Image')
 param.contrast_rect=contrast_rect;
   
 
-% filtering the image
+%%
+
+
+% /////////////////////////////////
+%         Decision-4             //
+% /////////////////////////////////
+% applying a gaussian filter
+
 gaussian_sigma=NaN;
 img_filter=imgaussfilt(img_adj,gaussian_sigma);
 param.gaussian_sigma=gaussian_sigma;
+image_viewer(img_filter,"filtered image")
 
 
+%%
+
+
+% /////////////////////////////////
+%         Decision-5             //
+% /////////////////////////////////
 % applying "Canny" edge detection
-canny_threshold_rect=NaN;
+
+canny_threshold_rect=[];
 canny_sigma=NaN;
 param.canny_sigma=canny_sigma;
 param.canny_threshold_rect=canny_threshold_rect;
@@ -120,8 +146,13 @@ img_canny=edge(img_filter,"canny_old",canny_threshold_rect,canny_sigma);
 image_viewer(img_canny,"Canny Detected Image")
 
 
+%%
+
 % saving the 'param' struct
 save('params_sedimentation.mat','param');
+
+
+
 
 %% 
 
