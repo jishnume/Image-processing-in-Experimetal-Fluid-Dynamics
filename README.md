@@ -22,3 +22,6 @@ A hands-on course that takes you from installing MATLAB to measuring the sedimen
 ### Other materials
 A short [presentation](ppt_training/ppt_DIP_training.pdf) given during the training
 
+
+### Contact
+For any issue regarding the repo, create an issue. Otherwise, send me an [email](goswamijishnume@gmail.com).
