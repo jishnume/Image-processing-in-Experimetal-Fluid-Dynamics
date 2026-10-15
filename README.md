@@ -6,7 +6,7 @@ A repository that presents a simple introduction to image-processing using MATLA
 
 ### Brief plan for the topics
 
-A hands-on course that takes you from installing MATLAB to measuring the sedimentation velocity of a soft particle from images.
+A hands-on course that takes you from installing MATLAB to measuring the sedimentation velocity of a solid particle from images.
 
 | Lesson | Topic |
 |:------:|-------|
