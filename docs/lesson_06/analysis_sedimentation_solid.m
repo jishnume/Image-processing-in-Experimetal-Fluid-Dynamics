@@ -151,10 +151,11 @@ image_viewer(img_canny,"Canny Detected Image")
 % saving the 'param' struct
 save('params_sedimentation.mat','param');
 
-
+close all;clear;clc
 
 
 %% 
+
 
 % //////////////////////////////////////////
 %          Stage-2: Full Analysis         //
@@ -164,11 +165,15 @@ save('params_sedimentation.mat','param');
 load('params_sedimentation.mat');
 frame_vec=param.first_physical_frame:param.final_frame;
 
+
 % FULL ANALYSIS
 data_sphere=SphereFullAnalysis(param.video_sphere,param,frame_vec);
 writematrix(data_sphere,'raw_data.csv',delimiter=',')
- 
+
+
+
 %% 
+
 
 % ////////////////////////////////
 %        POST-PROCESSING        //
@@ -179,8 +184,9 @@ data=readmatrix('raw_data.csv',delimiter=',');
 
 load('params_sedimentation.mat');
 
-cal_factor=25;    % need to read from a file
+cal_factor=25;
 video_fps=29.97;
+
 
 % extracting variables
 frames=data(:,1)-param.first_physical_frame;
