@@ -1,7 +1,7 @@
 # Image-processing-in-Experimetal-Fluid-Dynamics
 
 ## About this repository
-Here, I have described some of the common image processing techniques to analyse fluid dynamics experiments.
+A repository that presents a simple introduction to image-processing using MATLAB.
 
 
 ### Brief plan for the topics
@@ -17,5 +17,8 @@ A hands-on course that takes you from installing MATLAB to measuring the sedimen
 | [04](docs/lesson_04/) | Image Enhancement |
 | [05](docs/lesson_05/) | Image Segmentation |
 | [06](docs/lesson_06/) | Project - Sedimentation of a sphere |
-| [07](docs/lesson_07/) | Practice, - more sample images to try|
+
+
+### Other materials
+A short [presentation](ppt_training/ppt_DIP_training.pdf) given during the training
 
